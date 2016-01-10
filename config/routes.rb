@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :artists
+  resources :artists, :venues
 
   get 'home/index'
 
