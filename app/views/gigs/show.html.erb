@@ -17,7 +17,8 @@
 
 <p>Seats available for this show: <%= @gig.tickets_available %></p>
 
-<p>ADD BOOKING BUTTON HERE </p>
-
-<%= content_tag(:button, "Book seats", :type=>:submit)%>
-
+<nav>
+  <ul>
+    <li><%= link_to('Book seats for this gig!', new_booking_path) %></li>
+  </ul>
+</nav>
