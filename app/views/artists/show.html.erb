@@ -1,4 +1,9 @@
 <h1><%= @artist.name %></h1>
 <p><%= @artist.description %></p>
 <p><%= image_tag(@artist.image, alt: 'No image', width: 200) %></p>
-<p>artist gigs</p>
+
+<h2>Gigs featuring this artist at the 2016 Edinburgh Festival:</h2>
+<% @artist.gigs.each do |gig| %>
+  <% gigtime = DateTime.parse(gig.start_time) %>
+  <p><%= gig.name %> ... at <%= gig.venue.name %> ... on <%= gigtime.strftime("%d/%m/%Y") %> at <%= gigtime.strftime("%H:%M") %></p>
+<% end %>
