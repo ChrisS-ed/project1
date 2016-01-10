@@ -4,4 +4,8 @@ class GigsController < ApplicationController
     @gigs = Gig.all
   end
 
+  def show
+    @gig = Gig.find(params[:id])
+  end
+
 end
