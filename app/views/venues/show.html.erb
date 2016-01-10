@@ -1,0 +1,10 @@
+<h1><%= @venue.name %></h1>
+<p><%= @venue.location %></p>
+<p><%= image_tag(@venue.image, alt: 'No image', width: 200) %></p>
+
+<h2>Gigs scheduled at this venue during the 2016 Edinburgh Festival:</h2>
+
+<% @venue.gigs.each do |gig| %>
+  <% gigtime = DateTime.parse(gig.start_time) %>
+  <p><%= gig.name %> ... at <%= gig.venue.name %> ... on <%= gigtime.strftime("%d/%m/%Y") %> at <%= gigtime.strftime("%H:%M") %></p>
+<% end %>

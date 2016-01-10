@@ -1,4 +1,5 @@
+<h1>List of venues taking part in 2016 Edinburgh Festival</h1>
+
 <% @venues.each do |venue| %>
-  <%= venue.name %>
-  <br>
+  <p><%= link_to("#{venue.name}", venue_path(venue)) %></p>
 <% end %>
