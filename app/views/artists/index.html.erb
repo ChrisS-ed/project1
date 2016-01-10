@@ -1,4 +1,4 @@
+<h1>List of artists performing at 2016 Edinburgh Festival</h1>
 <% @artists.each do |artist| %>
-  <p><%= artist.name %></p>
-  <%= link_to("Show #{artist.name}", artist_path(artist)) %>
+  <p><%= link_to("#{artist.name}", artist_path(artist)) %></p>
 <% end %>
