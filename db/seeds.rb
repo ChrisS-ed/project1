@@ -8,11 +8,11 @@
 
 Artist.delete_all
 
-a1 = Artist.create!(name: 'Lazy Susan', description: 'The 2014 Foster’s Edinburgh Comedy Award Best Newcomer nominees.', image: 'blank')
-a2 = Artist.create!(name: 'Ed Eales-White and Jon Pointing', description: 'Writers and performers of BBC mini series Life Guru.', image: 'blank')
-a3 = Artist.create!(name: 'Babolin Theatre', description: 'Cambridge-based professional theatre company for young people.', image: 'blank')
-a4 = Artist.create!(name: 'Knuckle and Joint', description: 'Puppetry company based in Canterbury.', image: 'blank')
-a5 = Artist.create!(name: 'Royal Over-Seas League', description: 'Award-winning musicians including Charlotte Ashton flute, Solem Quartet, Zelkova Quartet, Quattro (cello quartet), Françoise-Green piano duo, pianists Jan Hugo and Alexander Soares.', image: 'blank')
+a1 = Artist.create!(name: 'Lazy Susan', description: 'The 2014 Foster’s Edinburgh Comedy Award Best Newcomer nominees.', image: '2015LAZYSUS_PS.jpg')
+a2 = Artist.create!(name: 'Ed Eales-White and Jon Pointing', description: 'Writers and performers of BBC mini series Life Guru.', image: '2015BUCKET_PI.jpg')
+a3 = Artist.create!(name: 'Babolin Theatre', description: 'Cambridge-based professional theatre company for young people.', image: '2015FRANTIC_BD.jpg')
+a4 = Artist.create!(name: 'Knuckle and Joint', description: 'Puppetry company based in Canterbury.', image: '2015BLACKHO_3T.jpg')
+a5 = Artist.create!(name: 'Royal Over-Seas League', description: 'Award-winning musicians including Charlotte Ashton flute, Solem Quartet, Zelkova Quartet, Quattro (cello quartet), Françoise-Green piano duo, pianists Jan Hugo and Alexander Soares.', image: 'ROSL.jpg')
 
 Venue.delete_all
 
