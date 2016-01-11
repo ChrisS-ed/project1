@@ -13,7 +13,7 @@
 <p>Starts: <%= gigtime.strftime("%H:%M") %></p>
 <p>Ends: <%= gigfinish.strftime("%H:%M") %></p>
 
-<p>Ticket price: TO BE ADDED </p>
+<p>Ticket price: £<%= @gig.ticket_price %> each</p>
 
 <p>Seats available for this show: <%= @gig.tickets_available %></p>
 
