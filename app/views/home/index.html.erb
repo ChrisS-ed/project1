@@ -15,3 +15,10 @@
     <li><%= link_to('List bookings', bookings_path()) %></li>
   </ul>
 </nav>
+
+<%= form_tag search_index_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>

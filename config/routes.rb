@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   get 'home/index'
+  get 'search/index'
 
   devise_for :users
   root to: "home#index"
