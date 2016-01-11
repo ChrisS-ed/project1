@@ -16,11 +16,11 @@ a5 = Artist.create!(name: 'Royal Over-Seas League', description: 'Award-winning 
 
 Venue.delete_all
 
-v1 = Venue.create!(name: 'Pleasance Dome', location: 'Potterrow, EH8 9AL', image: 'blank')
-v2 = Venue.create!(name: 'Pleasance Courtyard', location: '60 Pleasance, EH8 9TJ', image: 'blank')
-v3 = Venue.create!(name: 'Bedlam Theatre', location: '11b Bristo Place, EH1 1EZ', image: 'blank')
-v4 = Venue.create!(name: 'Surgeons Hall', location: 'Nicolson Street, EH8 9DW', image: 'blank')
-v5 = Venue.create!(name: 'Royal Over-Seas League', location: 'Over-Seas House, EH2 3AB', image: 'blank')
+v1 = Venue.create!(name: 'Pleasance Dome', location: 'Potterrow, EH8 9AL', image: 'pleasance_dome.jpg')
+v2 = Venue.create!(name: 'Pleasance Courtyard', location: '60 Pleasance, EH8 9TJ', image: 'pleasance_courtyard.jpg')
+v3 = Venue.create!(name: 'Bedlam Theatre', location: '11b Bristo Place, EH1 1EZ', image: 'bedlam.jpg')
+v4 = Venue.create!(name: 'Surgeons Hall', location: 'Nicolson Street, EH8 9DW', image: 'surgeons_hall.jpg')
+v5 = Venue.create!(name: 'Royal Over-Seas League', location: 'Over-Seas House, EH2 3AB', image: 'overseas_house.jpg')
 
 Gig.delete_all
 
