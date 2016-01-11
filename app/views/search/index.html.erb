@@ -1,1 +1,10 @@
 <h1>Search results</h1>
+
+<% if @results.present? %>
+  <% @results.each do |r| %>
+  <%= r.name %>
+  <br>
+  <% end %>
+<% else %>
+  <p>Could not find matches containing the term(s): <%= params[:search] %>.</p>
+<% end %>
