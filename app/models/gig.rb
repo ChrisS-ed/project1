@@ -4,4 +4,9 @@ class Gig < ActiveRecord::Base
 
   has_many :bookings
   has_many :users, through: :bookings
+
+  def self.search(q)
+    where('name like :value OR description like :value', value: "%#{q}%")
+  end
+  
 end
