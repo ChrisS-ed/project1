@@ -1,16 +1,18 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @bookings = Booking.all
   end
 
   def new
+    @gig = Gig.find(params[:gig_id])
     @booking = Booking.new
   end
 
   def create
-      @booking = Booking.create(booking_params)
-      redirect_to(@booking)
+    @booking = current_user.bookings.create(booking_params)
+    redirect_to(@booking)
   end
 
   def show

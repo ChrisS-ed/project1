@@ -1,5 +1,8 @@
 <h1>List of bookings made: </h1>
 
 <% @bookings.each do |b| %>
-  <p><%= b %></p>
+  <p>Seats: <%= b.seats %></p>
+  <p>User_id: <%= b.user_id %></p>
+  <p>Gig_id: <%= b.gig_id %></p>
+  <br>
 <% end %>
