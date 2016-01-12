@@ -1,7 +1,10 @@
 <h1>Booking Page </h1>
 
+<p>You are booking seats for <%= @gig.name %> at <%= @gig.venue.name %> (<%= @gig.start_time %>)</p>
+<p><%= @gig.tickets_available %> seats are still available for this gig</p>
+
 <%= form_for [@gig, @booking] do |f| %>
-    <%= f.label :seats %>
+    <%= f.label :seats, 'Number of seats required:' %>
     <%= f.text_field :seats %>
     <%= f.hidden_field :gig_id, value: @gig.id %>
     <br>
