@@ -13,8 +13,17 @@ class BookingsController < ApplicationController
   def create
     seats_wanted = booking_params[:seats].to_i
     this_gig = Gig.find(booking_params[:gig_id])
+
+    # CHECK FOR GIG SCHEDULE CLASHES
+    if Booking.schedule_clash(this_gig, current_user)
+      flash[:alert] = "BOOKING FAILED: Sorry, this gig clashes with one of your existing bookings"
+      redirect_to(new_gig_booking_path(this_gig))
+      return
+    end
+
+    # CHECK ENOUGH SEATS AVAILABLE
     if seats_wanted > this_gig.tickets_available
-      flash[:alert] = "Sorry, only #{this_gig.tickets_available} tickets left for this gig"
+      flash[:alert] = "BOOKING FAILED: Sorry, only #{this_gig.tickets_available} tickets left for this gig"
       redirect_to(new_gig_booking_path(this_gig))
     else
       this_gig.tickets_available -= seats_wanted
