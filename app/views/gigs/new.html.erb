@@ -1,10 +1,10 @@
 <h1>Add gig to database</h1>
 
 <%= form_for @gig do |f| %>
-    <%= f.label :name %>
+    <%= f.label :name, 'Gig name' %>
     <%= f.text_field :name %>
     <br>
-    <%= f.label :description %>
+    <%= f.label :description, 'Gig description' %>
     <%= f.text_area :description %>
     <br>
     <%= f.label :artist_id %>
@@ -13,16 +13,16 @@
     <%= f.label :venue_id %>
     <%= f.collection_select(:venue_id, Venue.all, :id, :name) %>
     <br>
-    <%= f.label :ticket_price %>
+    <%= f.label :ticket_price, 'Ticket price (£)' %>
     <%= f.text_field :ticket_price %>
     <br>
-    <%= f.label :tickets_available %>
+    <%= f.label :tickets_available, 'Number of tickets available' %>
     <%= f.text_field :tickets_available %>
     <br>
-    <%= f.label :start_time %>
+    <%= f.label :start_time, 'Start time (dd/mm/yy hh/mm/ss)' %>
     <%= f.text_field :start_time %>
     <br>
-    <%= f.label :end_time %>
+    <%= f.label :end_time, 'Start time (dd/mm/yy hh/mm/ss)' %>
     <%= f.text_field :end_time %>
     <br>
     <%= f.label :keywords %>
