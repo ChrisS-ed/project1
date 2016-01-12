@@ -11,8 +11,17 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = current_user.bookings.create(booking_params)
-    redirect_to(@booking)
+    seats_wanted = booking_params[:seats].to_i
+    this_gig = Gig.find(booking_params[:gig_id])
+    if seats_wanted > this_gig.tickets_available
+      flash[:alert] = "Sorry, only #{this_gig.tickets_available} tickets left for this gig"
+      redirect_to(new_gig_booking_path(this_gig))
+    else
+      this_gig.tickets_available -= seats_wanted
+      this_gig.save
+      @booking = current_user.bookings.create(booking_params)
+      redirect_to(@booking)
+    end
   end
 
   def show
