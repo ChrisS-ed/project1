@@ -1,6 +1,10 @@
 <h1>List of artists performing at 2016 Edinburgh Festival</h1>
 
 <% @artists.order(:name).each do |artist| %>
-  <p><%= link_to("#{artist.name}", artist_path(artist)) %> <%= link_to('(Edit)', edit_artist_path(artist)) %></p>
+  <p><%= link_to("#{artist.name}", artist_path(artist)) %> 
+  <% if can? :create, Artist %> 
+    <%= link_to('(Edit)', edit_artist_path(artist)) %>
+  <% end %>
+  </p>
 
 <% end %>

@@ -1,5 +1,5 @@
 class GigsController < ApplicationController
-
+  
   def index
     @gigs = Gig.all
   end
@@ -19,6 +19,7 @@ class GigsController < ApplicationController
 
   def edit
     @gig = Gig.find(params[:id])
+    authorize! :edit, @gig
   end
 
   def update
