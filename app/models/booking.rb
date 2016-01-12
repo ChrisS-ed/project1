@@ -3,6 +3,9 @@ class Booking < ActiveRecord::Base
   belongs_to :gig
 
   def self.schedule_clash(new_gig, current_user)
+    if current_user.bookings == [] 
+      return false
+    end
     new_starttime = DateTime.parse(new_gig.start_time)
     new_endtime = DateTime.parse(new_gig.end_time)
     current_user.bookings.each do |b|

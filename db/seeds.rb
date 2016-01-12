@@ -30,12 +30,12 @@ g3 = Gig.create!(name: 'The Frantic Canticles of Little Brother Fish', descripti
 g4 = Gig.create!(name: 'The Black Hoods Cabaret', description: 'Bear witness to the debauchery and murder of some of the most decrepit puppets to crawl out of a back alley. A puppet cabaret for adults that will charm you into darkness and mayhem, as a pair of calamitous puppeteers manipulate a variety of disturbed and troubled puppets.', artist_id: a4.id, venue_id: v4.id, ticket_price: 9, tickets_available: 150, start_time: '2016-08-22 22:10:00', end_time: '2016-08-22 23:10:00', keywords: 'puppets, puppetry, cabaret')
 g5 = Gig.create!(name: 'Mozart at Teatime', description: 'Different artists and programmes each concert. Tea/coffee shortbread afterwards included.', artist_id: a5.id, venue_id: v5.id, ticket_price: 6, tickets_available: 100, start_time: '2016-08-19 16:00:00', end_time: '2016-08-19 17:00:00', keywords: 'classical music')
 
-User.delete_all
+# User.delete_all
 
-u1 = User.create!(email: 'test@email.com', password: '12345678')
+# u1 = User.create!(email: 'test@email.com', password: '12345678')
 
-Booking.delete_all
+# Booking.delete_all
 
-Booking.create!(seats: 2, user_id: u1.id, gig_id: g1.id)
+# Booking.create!(seats: 2, user_id: u1.id, gig_id: g1.id)
 
 
