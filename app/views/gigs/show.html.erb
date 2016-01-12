@@ -1,11 +1,11 @@
 <h1><%= @gig.name %></h1>
 
-<p><%= @gig.artist.name %></p>
+<p>Artist: <%= link_to("#{@gig.artist.name}", artist_path(@gig.artist)) %></p>
 <p><%= image_tag(@gig.artist.image, alt: 'No image', width: 200) %></p>
 
 <p><%= @gig.description %></p>
 
-<p>Venue: <%= @gig.venue.name %></p>
+<p>Venue: <%= link_to("#{@gig.venue.name}", venue_path(@gig.venue)) %></p>
 
 <% gigtime = DateTime.parse(@gig.start_time) %>
 <% gigfinish = DateTime.parse(@gig.end_time) %>
@@ -22,3 +22,4 @@
     <li><%= link_to('Book seats for this gig!', new_gig_booking_path(@gig)) %></li>
   </ul>
 </nav>
+
