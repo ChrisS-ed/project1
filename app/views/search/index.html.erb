@@ -3,6 +3,9 @@
 <% if @results.present? %>
   <% @results.each do |r| %>
   <%= r.name %>
+  <%= r.class %>
+  <%= r.class == Artist %>
+  <%= r.class.all.first.name %>
   <br>
   <% end %>
 <% else %>
