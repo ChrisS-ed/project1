@@ -1,5 +1,5 @@
 <h1>List of venues taking part in 2016 Edinburgh Festival</h1>
 
-<% @venues.each do |venue| %>
+<% @venues.order(:name).each do |venue| %>
   <p><%= link_to("#{venue.name}", venue_path(venue)) %></p>
 <% end %>

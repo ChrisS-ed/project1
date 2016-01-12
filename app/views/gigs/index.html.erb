@@ -1,5 +1,5 @@
 <h1>List of all gigs taking place at 2016 Edinburgh Festival</h1>
 
-<% @gigs.each do |gig| %>
+<% @gigs.order(:name).each do |gig| %>
   <p><%= link_to("#{gig.name}", gig_path(gig)) %></p>
 <% end %>
