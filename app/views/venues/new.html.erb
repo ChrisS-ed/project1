@@ -1,14 +1,16 @@
-<h1>Add venue to database</h1>
+<div class='list_container'>
+    <h1>Add venue to database</h1>
 
-<%= form_for @venue do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <br>
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-    <br>
-    <%= f.submit 'Add venue' %>
-  <% end %>
+    <%= form_for @venue do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+        <br>
+        <%= f.label :image %>
+        <%= f.text_field :image %>
+        <br>
+        <%= f.submit 'Add venue' %>
+      <% end %>
+  </div>

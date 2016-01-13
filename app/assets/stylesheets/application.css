@@ -65,7 +65,9 @@
  }
 
  .homepage_links li a {
+    color: white;
     font-size: 30px;
+    text-decoration: none;
  }
 
  .searchbox {
@@ -86,6 +88,8 @@
   margin: 0 auto;
   margin-top: 20px;
   padding: 15px;
+  height: 400px;
+  overflow: auto;
  }
 
  .go-left {
