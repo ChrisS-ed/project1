@@ -1,3 +1,6 @@
-<h1>Seats booked!</h1>
+<div class='list_container'>
+  <h1>Seats booked!</h1>
 
-<p>You have booked <%= @booking.seats %> seats</p>
+  <p>You have booked <%= @booking.seats %> seats for <%= @booking.gig.name %></p>
+  <p>Price: £<%= @booking.gig.ticket_price * @booking.seats %></p>
+</div>
