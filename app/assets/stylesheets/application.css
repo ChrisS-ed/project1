@@ -39,19 +39,19 @@
 
  .logo {
    color: red;
-   font-size: 30px;
+   font-size: 40px;
    font-weight: 600;
    margin-left: 20px;
    line-height: 65px;
  }
 
  section {
-  height: 450px;
+  height: 550px;
  }
 
  .homepage_links ul {
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     width: 35%;
 }
@@ -112,7 +112,7 @@
 
  .headerlink a {
    color: white;
-   font-size: 12px;
+   font-size: 20px;
    font-weight: 100;
    text-decoration: none;
  }
