@@ -1,10 +1,12 @@
-<h1>List of artists performing at 2016 Edinburgh Festival</h1>
+<div class='list_container'>
+  <h1>Artists performing:</h1>
 
-<% @artists.order(:name).each do |artist| %>
-  <p><%= link_to("#{artist.name}", artist_path(artist)) %> 
-  <% if can? :create, Artist %> 
-    <%= link_to('(Edit)', edit_artist_path(artist)) %>
+  <% @artists.order(:name).each do |artist| %>
+    <p><%= link_to("#{artist.name}", artist_path(artist)) %> 
+    <% if can? :create, Artist %> 
+      <%= link_to('(Edit)', edit_artist_path(artist)) %>
+    <% end %>
+    </p>
+
   <% end %>
-  </p>
-
-<% end %>
+</div>

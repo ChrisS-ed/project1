@@ -1,9 +1,11 @@
-<h1>List of venues taking part in 2016 Edinburgh Festival</h1>
+<div class='list_container'>
+  <h1>List of venues:</h1>
 
-<% @venues.order(:name).each do |venue| %>
-  <p><%= link_to("#{venue.name}", venue_path(venue)) %> 
-  <% if can? :create, Venue %> 
-    <%= link_to('(Edit)', edit_venue_path(venue)) %>
+  <% @venues.order(:name).each do |venue| %>
+    <p><%= link_to("#{venue.name}", venue_path(venue)) %> 
+    <% if can? :create, Venue %> 
+      <%= link_to('(Edit)', edit_venue_path(venue)) %>
+    <% end %>
+    </p>
   <% end %>
-  </p>
-<% end %>
+</div>
