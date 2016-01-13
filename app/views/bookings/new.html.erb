@@ -10,7 +10,7 @@
 
   <%= form_for [@gig, @booking] do |f| %>
       <%= f.label :seats, 'Number of seats required:' %>
-      <%= f.text_field :seats %>
+      <%= f.text_field :seats, required: true %>
       <%= f.hidden_field :gig_id, value: @gig.id %>
       <br>
       <%= f.submit 'Book seats!' %>

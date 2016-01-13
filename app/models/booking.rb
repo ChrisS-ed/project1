@@ -2,6 +2,8 @@ class Booking < ActiveRecord::Base
   belongs_to :user
   belongs_to :gig
 
+  validates :seats, :numericality => { :greater_than => 0} 
+
   def self.schedule_clash(new_gig, current_user)
     if current_user.bookings == [] 
       return false
