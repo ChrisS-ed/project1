@@ -1,25 +1,26 @@
-<h1><%= @gig.name %></h1>
+<div class='list_container'>
+  <h1><%= @gig.name %></h1>
 
-<p>Artist: <%= link_to("#{@gig.artist.name}", artist_path(@gig.artist)) %></p>
-<p><%= image_tag(@gig.artist.image, alt: 'No image', width: 200) %></p>
+  <p>Artist: <%= link_to("#{@gig.artist.name}", artist_path(@gig.artist)) %></p>
+  <p><%= image_tag(@gig.artist.image, alt: 'No image', width: 200) %></p>
 
-<p><%= @gig.description %></p>
+  <p><%= @gig.description %></p>
 
-<p>Venue: <%= link_to("#{@gig.venue.name}", venue_path(@gig.venue)) %></p>
+  <p>Venue: <%= link_to("#{@gig.venue.name}", venue_path(@gig.venue)) %></p>
 
-<% gigtime = DateTime.parse(@gig.start_time) %>
-<% gigfinish = DateTime.parse(@gig.end_time) %>
-<p>Date: <%= gigtime.strftime("%d/%m/%Y") %></p>
-<p>Starts: <%= gigtime.strftime("%H:%M") %></p>
-<p>Ends: <%= gigfinish.strftime("%H:%M") %></p>
+  <% gigtime = DateTime.parse(@gig.start_time) %>
+  <% gigfinish = DateTime.parse(@gig.end_time) %>
+  <p>Date: <%= gigtime.strftime("%d/%m/%Y") %></p>
+  <p>Starts: <%= gigtime.strftime("%H:%M") %></p>
+  <p>Ends: <%= gigfinish.strftime("%H:%M") %></p>
 
-<p>Ticket price: £<%= @gig.ticket_price %> each</p>
+  <p>Ticket price: £<%= @gig.ticket_price %> each</p>
 
-<p>Seats available for this show: <%= @gig.tickets_available %></p>
+  <p>Seats available for this show: <%= @gig.tickets_available %></p>
 
-<nav>
-  <ul>
-    <li><%= link_to('Book seats for this gig!', new_gig_booking_path(@gig)) %></li>
-  </ul>
-</nav>
-
+  <nav>
+    <ul>
+      <li><%= link_to('Book seats for this gig!', new_gig_booking_path(@gig)) %></li>
+    </ul>
+  </nav>
+</div>

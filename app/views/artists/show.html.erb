@@ -1,10 +1,12 @@
-<h1><%= @artist.name %></h1>
-<p><%= @artist.description %></p>
-<p><%= image_tag(@artist.image, alt: 'No image', width: 200) %></p>
+<div class='list_container'>
+  <h1><%= @artist.name %></h1>
+  <p><%= @artist.description %></p>
+  <p><%= image_tag(@artist.image, alt: 'No image', width: 200) %></p>
 
-<h2>Gigs featuring this artist at the 2016 Edinburgh Festival:</h2>
-<% @artist.gigs.order(:name).each do |gig| %>
-  <% gigtime = DateTime.parse(gig.start_time) %>
-  <p><%= link_to("#{gig.name}", gig_path(gig)) %> ... at <%= link_to("#{gig.venue.name}", venue_path(gig.venue)) %> ... on <%= gigtime.strftime("%d/%m/%Y") %> at <%= gigtime.strftime("%H:%M") %></p>
-<% end %>
+  <h2>Gigs featuring this artist:</h2>
+  <% @artist.gigs.order(:name).each do |gig| %>
+    <% gigtime = DateTime.parse(gig.start_time) %>
+    <p><%= link_to("#{gig.name}", gig_path(gig)) %> ... at <%= link_to("#{gig.venue.name}", venue_path(gig.venue)) %> ... on <%= gigtime.strftime("%d/%m/%Y") %> at <%= gigtime.strftime("%H:%M") %></p>
+  <% end %>
+</div>
 

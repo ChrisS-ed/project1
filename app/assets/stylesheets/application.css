@@ -106,7 +106,7 @@
    display: inline-block;
  }
 
- nav ul li a {
+ .headerlink a {
    color: white;
    font-size: 12px;
    font-weight: 100;
