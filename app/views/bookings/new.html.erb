@@ -3,7 +3,7 @@
 <p>You are booking seats for <%= @gig.name %> at <%= @gig.venue.name %> (<%= @gig.start_time %>)</p>
 <% existing_booking = current_user.bookings.find_by(gig_id: @gig.id)%>
 <% if existing_booking %>
-  <p>You currently have <%= existing_booking.seats %> seat(s) booked for this gig. Would you like to book more?</p>
+  <p>*** You currently have <%= existing_booking.seats %> seat(s) booked for this gig ***</p>
 <% end %>
 <p><%= @gig.tickets_available %> seats are still available for this gig</p>
 
