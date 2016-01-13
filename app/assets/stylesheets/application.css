@@ -16,6 +16,10 @@
 
  body {
    background-color: rgb(223, 223, 223);
+   background-image: url(edinburghHQ.jpg);
+   background-repeat: no-repeat;
+   background-position: center; 
+   background-size: 100%;
  }
 
  header {
