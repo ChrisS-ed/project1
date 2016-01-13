@@ -31,8 +31,8 @@
  }
 
  .logo {
-   color: white;
-   font-size: 20px;
+   color: red;
+   font-size: 30px;
    font-weight: 600;
    margin-left: 20px;
    line-height: 65px;
@@ -43,7 +43,7 @@
   height: 450px;
  }
 
- .homepage_links {
+ .homepage_links li {
     display: block;
  }
 
@@ -58,14 +58,6 @@
 
  .go-right {
    float: right;
- }
-
- .logo {
-   color: white;
-   font-size: 20px;
-   font-weight: 600;
-   margin-left: 20px;
-   line-height: 65px;
  }
 
  nav ul {
