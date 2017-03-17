@@ -1,28 +1,10 @@
-== README
+CodeClan course: Project 1 - Gig Ticket Booker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Objective:
+To produce an Edinburgh Festival ticket booking app
 
-Things you may want to cover:
+Must-have features:
+Admins need to be able to add venues, and schedule gigs at those venues - more than one gig a night. 
+Gigs need to be classified with keywords to allow registered users to search for gigs.
+Users must be able to book seats – assuming the gig has space, and the user has no other gigs booked at that time.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
