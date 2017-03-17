@@ -4,7 +4,27 @@ Objective:
 To produce an Edinburgh Festival ticket booking app
 
 Must-have features:
+
 Admins need to be able to add venues, and schedule gigs at those venues - more than one gig a night. 
 Gigs need to be classified with keywords to allow registered users to search for gigs.
 Users must be able to book seats – assuming the gig has space, and the user has no other gigs booked at that time.
 
+Approach:
+
+A web app created with Ruby on Rails and using models to represent the main components of a ticket booking system and the relationships involved.
+
+Building the app:
+
+Set up Rails with Devise for the User model
+
+Create models for Artist,  Venue, Gig and Booking
+
+Set up associations between the models (and check them in console)
+
+Build RESTful routes for the models - and the required controllers
+
+Add search box on home page
+
+Check for schedule clashes when users are booking multiple gigs (and seat availability)
+
+Set up Cancan so only admin can add and edit data on the site
